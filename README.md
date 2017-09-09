@@ -26,6 +26,17 @@ Demo looks like
 ## Deploy
 we deploy a hadoop cluster on Docker, this cluster has one Masternode and two slavenodes. The whole project is based on the docker.
 
+Raw data is from this [website](https://www.limfinity.com/ir/).
+
+Data preprocessing
+
+I preprocessed the original dataset in two steps:
+
+* Give every website a tag, mapping the tag to every website.
+
+* Change the data in each pagelink file into the following format: frompage-id topage-id.
+
+
 There are two Mapreduce job here, both of them has two mappers.
 
 * mr1_mapper1: use relation.txt to generate transition matrix cell
